@@ -36,22 +36,22 @@ export default function TaskItem({
           {task.description ? (
             <Text className="text-muted-foreground text-[11px] mb-2">{task.description}</Text>
           ) : null}
-          <Text className="text-muted-foreground text-[10px]">{new Date(task.createdAt).toLocaleString()}</Text>
+          <Text className="text-muted-foreground text-[.5rem] font-[PressStart2P]  text-[#FFD900]">{new Date(task.createdAt).toLocaleString()}</Text>
         </View>
 
-        <View className="items-end ml-3">
-          <View className={`px-2 py-1 rounded-full ${badgeColor} mb-2`}>
-            <Text className="text-black text-[10px] font-[PressStart2P]">
+        <View className="items-end mb-3 ml-3">
+          <View className={`px-2 py-1 flex justify-center items-center rounded-full ${badgeColor} mb-2`}>
+            <Text className="text-black text-[0.6rem] font-[PressStart2P]">
               {task.status === "todo" ? "To Do" : task.status === "inprogress" ? "In Progress" : "Completed"}
             </Text>
           </View>
 
-          <View className="flex-row">
-            <TouchableOpacity onPress={onEdit} className="mr-2 px-2 py-1 rounded bg-primary/20">
-              <Text className="text-white text-[10px]">Edit</Text>
+          <View className="flex-row justify-between flex  gap-4">
+            <TouchableOpacity onPress={onEdit} className=" flex justify-center items-center px-2 py-1 rounded bg-primary/20">
+              <Text className="text-white text-[0.6rem] font-[PressStart2P]">Edit</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={onDelete} className="px-2 py-1 rounded bg-red-500/80">
-              <Text className="text-white text-[10px]">Delete</Text>
+            <TouchableOpacity onPress={onDelete} className="px-2 flex justify-center items-center  py-2 rounded bg-red-500/80">
+              <Text className="text-white text-[0.6rem] font-[PressStart2P] ">Delete</Text>
             </TouchableOpacity>
           </View>
         </View>

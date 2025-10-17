@@ -1,5 +1,7 @@
 /* eslint-disable prettier/prettier */
-import React, { useState } from "react";
+/* eslint-disable import/no-unresolved */
+/* eslint-disable prettier/prettier */
+import React, { useCallback, useState } from "react";
 import { View, Text, TouchableOpacity, ScrollView } from "react-native";
 import { useFonts } from "expo-font";
 import RetroBackground from "@/components/RetroBackground";
@@ -7,8 +9,9 @@ import Header from "@/components/Header";
 import TaskItem from "@/components/TaskItem";
 import TodoModal from "@/components/TodoModal";
 import { useTodos, Todo } from "@/state/TodosContext";
-
+import * as SplashScreen from 'expo-splash-screen';
 type Status = "todo" | "inprogress" | "completed";
+
 
 export default function TodoScreen({ status }: { status: Status }) {
   const { todos, addTodo, updateTodo, deleteTodo } = useTodos();
@@ -18,10 +21,12 @@ export default function TodoScreen({ status }: { status: Status }) {
     PressStart2P: require("../../assets/fonts/PressStart2P-Regular.ttf"),
   });
 
+
+
+ 
   const filtered = todos.filter((t) => t.status === status);
 
-  if (!fontsLoaded) return null;
-
+ 
   const openNew = () => {
     setEditing(null);
     setModalVisible(true);
@@ -41,7 +46,13 @@ export default function TodoScreen({ status }: { status: Status }) {
     setEditing(t);
     setModalVisible(true);
   };
-
+if (!fontsLoaded) {
+  return (
+    <View className="flex-1 justify-center items-center bg-black">
+      <Text className="text-white">Loading...</Text>
+    </View>
+  );
+}
   return (
     <RetroBackground>
       <Header />
