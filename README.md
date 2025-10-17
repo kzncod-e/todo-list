@@ -1,4 +1,4 @@
-# 🌟 RetroTasksr — Retro Todo App
+# 🌟 RetroTasks — Retro Todo App
 
 Hey! Ini **RetroTasksr**, todo app kecil tapi asik banget dengan vibe **80s retro / neon**.  
 Dibangun pakai **Expo + Expo Router + NativeWind** (Tailwind untuk React Native), dan semua todo lo disimpen **lokal** pakai AsyncStorage.  
@@ -44,4 +44,4 @@ git clone https://github.com/kzncod-e/todo-list.git
 npm install
 
 # Start dev server
-npm run start
+npx expo start
