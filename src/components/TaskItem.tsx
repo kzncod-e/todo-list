@@ -32,11 +32,11 @@ export default function TaskItem({
     <View className={`border-2 rounded-lg p-4 mb-3 border-primary bg-white/3`}> 
       <View className="flex-row justify-between items-start">
         <View className="flex-1">
-          <Text className="text-white font-[PressStart2P] text-xs mb-2">{task.title}</Text>
+          <Text className="text-white font-[PressStart2P] text-[.7rem] mb-2">{task.title}</Text>
           {task.description ? (
-            <Text className="text-muted-foreground text-[11px] mb-2">{task.description}</Text>
+            <Text className=" font-[PressStart2P] text-[.6rem] text-white mb-2">{task.description}</Text>
           ) : null}
-          <Text className="text-muted-foreground text-[.5rem] font-[PressStart2P]  text-[#FFD900]">{new Date(task.createdAt).toLocaleString()}</Text>
+          <Text className=" text-[.5rem] font-[PressStart2P]  text-[#FFD900]">{new Date(task.createdAt).toLocaleString()}</Text>
         </View>
 
         <View className="items-end mb-3 ml-3">

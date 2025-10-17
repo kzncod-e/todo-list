@@ -19,7 +19,7 @@ const Header = () => {
       <View className="flex-row  items-center justify-between">
         <View className="flex-row justify-center items-center gap-2">
           <Bot color="#FF4DD2" size={28} />
-          <Text  className="text-[0.7rem] mt-2 font-[PressStart2P] text-white glow-text">
+          <Text  className="text-[0.7rem] mt-2 font-[PressStart2P] text-primary glow-text">
             RetroTasks
           </Text>
         </View>
