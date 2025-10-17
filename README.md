@@ -1,65 +1,47 @@
-# RetroTasksr — Todo app (Retro UI)
+# 🌟 RetroTasksr — Retro Todo App
 
-This is a small Todo app built with Expo + Expo Router and NativeWind (Tailwind for React Native). It uses a retro / 80s aesthetic and stores todos locally with AsyncStorage.
+Hey! Ini **RetroTasksr**, todo app kecil tapi asik banget dengan vibe **80s retro / neon**.  
+Dibangun pakai **Expo + Expo Router + NativeWind** (Tailwind untuk React Native), dan semua todo lo disimpen **lokal** pakai AsyncStorage.  
 
-## Features
-- Create todos with Title, Description and Status (To Do, In Progress, Completed)
-- Auto-generated Created At timestamp for each todo
-- Edit and delete todos with a modal UI
-- Three bottom tabs: To Do, In Progress, Completed
-- Local persistence using `@react-native-async-storage/async-storage`
-- Retro look using Tailwind (NativeWind) with neon/glow text and gradients
+---
 
-## Project structure (important files)
-- `src/app` — Expo Router routes
-	- `(tabs)/index.tsx` — bottom tabs layout
-	- `(tabs)/todo.tsx`, `inprogress.tsx`, `completed.tsx` — screens for each status
-- `src/components` — UI components (Header, RetroBackground, TaskItem, TodoModal, TodoScreen)
-- `src/state/TodosContext.tsx` — shared Todos context with AsyncStorage persistence
-- `assets/fonts` — PressStart2P font used for retro UI
+## ✨ Fitur Keren
+- Buat todo dengan **Title, Description**, dan **Status** (To Do / In Progress / Completed)  
+- **Created At** otomatis untuk tiap todo  
+- Edit & hapus todo pakai **modal retro keren**  
+- **3 bottom tabs** biar gampang liat todo sesuai status  
+- Semua data tersimpan di **AsyncStorage**, jadi nggak ilang kalau keluar app  
+- **Retro vibes**: neon glow, teks keren, dan gradient ala 80-an  
 
-## Dependencies
-- Expo (managed workflow)
-- `expo-router`
-- `nativewind` / `tailwindcss`
-- `@react-native-async-storage/async-storage`
-- `lucide-react-native` (icons)
-- `expo-linear-gradient`, `expo-font`
+---
 
-## How to run (Windows)
-1. Open a terminal in the project folder.
+## 🗂 Struktur Project
+- `src/app` — rute Expo Router  
+  - `(tabs)/_layout.tsx` — layout bottom tabs  
+  - `(tabs)/todo.tsx`, `inprogress.tsx`, `completed.tsx` — masing-masing status  
+- `src/components` — komponen UI: Header, RetroBackground, TaskItem, TodoModal, TodoScreen  
+- `src/state/TodosContext.tsx` — context untuk share todos + simpan ke AsyncStorage  
+- `assets/fonts` — **PressStart2P**, font retro favorit  
 
-PowerShell (may require using cmd if npm scripts are blocked by ExecutionPolicy):
+---
 
-```powershell
-cd "c:\Users\User\Documents\belajar pemograman\projek  mandiri\todo-mobile\my-app"
-# Install dependencies once
+## 📦 Dependensi
+- **Expo (managed workflow)**  
+- **expo-router**  
+- **nativewind / tailwindcss**  
+- **@react-native-async-storage/async-storage**  
+- **lucide-react-native** (ikon keren)  
+- **expo-linear-gradient & expo-font**  
+
+---
+
+## 🚀 Cara Jalanin (Windows)
+```bash
+# Clone repo
+git clone https://github.com/kzncod-e/todo-list.git
+
+# Install dependencies
 npm install
-# Start the dev server (Expo)
+
+# Start dev server
 npm run start
-```
-
-If PowerShell blocks npm.ps1, use cmd.exe instead:
-
-```cmd
-cd /d c:\Users\User\Documents\belajar pemograman\projek  mandiri\todo-mobile\my-app
-npm install
-npm run start
-```
-
-2. Open the Expo DevTools in the browser and run on a simulator or physical device (Android/iOS).
-
-## Linting & TypeScript
-- Lint: `npm run lint` (auto-fix with `npm run lint -- --fix`)
-- Type check: `npx tsc --noEmit`
-
-## Troubleshooting
-- If PowerShell complains about running scripts (ExecutionPolicy), open cmd.exe or adjust the policy: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` (run as admin).
-- If the bottom tabs don't appear, ensure you restarted the dev server after code changes. The app redirects to `/todo` which mounts the tabs layout.
-
-## Next improvements (optional)
-- Polish retro styles and keyboard behavior in modal
-- Add search / filter / sorting
-- Add export/import (JSON backup)
-
-If you'd like, I can run lint/type checks and fix any remaining issues, or add a floating Add button to the tab bar. Tell me which next step you want.
