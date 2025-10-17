@@ -1,13 +1,14 @@
-import { Stack } from "expo-router";
+import { Slot } from "expo-router";
 import "../../global.css";
 import React from "react";
 import { StatusBar } from "expo-status-bar";
+import { TodosProvider } from "@/state/TodosContext";
 
 export default function RootLayout() {
   return (
-    <React.Fragment>
+    <TodosProvider>
       <StatusBar style="auto" />
-      <Stack />
-    </React.Fragment>
+      <Slot />
+    </TodosProvider>
   );
 }

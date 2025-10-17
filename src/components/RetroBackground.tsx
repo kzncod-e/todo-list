@@ -1,8 +1,9 @@
-/* eslint-disable prettier/prettier */
 import { LinearGradient } from "expo-linear-gradient";
-import React, { PropsWithChildren } from "react";
+import React from "react";
 
-export default function RetroBackground({ children }: PropsWithChildren<{}>) {
+export default function RetroBackground({
+  children,
+}: React.PropsWithChildren<unknown>) {
   return (
     <LinearGradient
       colors={["#120318", "#350b40", "#002f4b"]}
