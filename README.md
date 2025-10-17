@@ -15,6 +15,18 @@ Dibangun pakai **Expo + Expo Router + NativeWind** (Tailwind untuk React Native)
 
 ---
 
+## 🖼 Contoh Tampilan
+### pertama
+![T](./assets/image1.jpg)
+
+### kedua
+![In Progress Screen](./assets/image2.jpg)
+
+### ketiga
+![Completed Screen](./assets/image3.jpg)
+
+---
+
 ## 🗂 Struktur Project
 - `src/app` — rute Expo Router  
   - `(tabs)/_layout.tsx` — layout bottom tabs  
